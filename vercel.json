@@ -2,7 +2,6 @@
   "builds": [
     {
       "src": "public",
-      "dest": ".",
       "use": "@vercel/static-plugin"
     }
   ]
