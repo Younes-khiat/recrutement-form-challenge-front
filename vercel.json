@@ -1,8 +1,6 @@
+
 {
-  "builds": [
-    {
-      "src": "public",
-      "use": "@vercel/static-plugin"
-    }
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
   ]
 }
