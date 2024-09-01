@@ -32,7 +32,7 @@ function SectionFor() {
     setIsReady(true);    
 
     try {
-       const response = await fetch('https://recrutement-form-challenge-back-2.onrender.com/register', {
+       const response = await fetch(`https://recrutement-form-challenge-back-2.onrender.com/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
