@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import LandingPage from './components/LandingPage/landingOage'
 import SectionOne from './components/section 1/section1';
@@ -16,6 +16,7 @@ function App() {
           <Route path='/section2' element={<SectionTwo />} />
           <Route path='/section3' element={<SectionThree />} />
           <Route path='/section4' element={<SectionFor />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     );
