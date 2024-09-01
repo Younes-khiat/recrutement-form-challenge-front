@@ -69,7 +69,7 @@ useEffect(() => {
               <label htmlFor="phoneNumber" className='form-label fw-semibold fs-5 pt-3'>Phone Number :</label>
               <input type="tel" name='phoneNumber' onChange={handleChange} className='p-2 form-control form-control-custom' placeholder='enter your phone number' required></input>
             </div>
-            <button type="submit" className=' my-4 py-2 btn btn-outline-custom fw-bold fs-5'>Next</button>
+            <button type="submit" className='form-control my-4 py-2 btn btn-custom fw-bold fs-5'>Next</button>
             
           </form>
       </div>

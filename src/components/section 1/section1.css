@@ -1,20 +1,21 @@
-.btn-outline-custom {
-    color: white;
-    border-color: #202068;
-    background-color: #202068;
+.btn-custom {
+    color: white !important;
+    border-color: #202068 !important;
+    background-color: #202068 !important;
 }
 
-.btn-outline-custom:hover {
-    background-color: white;
-    color: #202068;
-    border-color: #202068;
+.btn-custom:hover {
+    background-color: white !important;
+    color: #202068 !important;
+    border-color: #202068 !important;
+    
 }
 
 
 .form-control-custom:focus {
-    border-color: #202068;
-    border-width: 2px;
-    outline: none;
-    box-shadow: none;
+    border-color: #202068 !important;
+    border-width: 2px !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
