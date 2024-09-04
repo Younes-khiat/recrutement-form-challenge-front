@@ -30,7 +30,6 @@ function SectionFor() {
     console.log('section4' + (stringData));
 
     const data = ({ ...section1Data, ...section2Data, ...section3Data, ...stringData });
-    console.log
     setIsReady(true);    
 
     try {
