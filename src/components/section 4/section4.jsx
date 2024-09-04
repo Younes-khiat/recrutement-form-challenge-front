@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { json, useNavigate } from 'react-router-dom';
 
 function SectionFor() {
 
@@ -22,14 +22,17 @@ function SectionFor() {
         return ({message: `mmissing required field ${field}`})
       }
     }
+    
     const section1Data = JSON.parse(localStorage.getItem('section1')) || {};
     const section2Data = JSON.parse(localStorage.getItem('section2')) || {};
     const section3Data = JSON.parse(localStorage.getItem('section3')) || {};
 
-    const stringData = JSON.stringify(formData);
-    console.log('section4' + (stringData));
+    const stringDataRelevantExperiences = (formData.relevantExperiences);
+    const stringDataWhyJoin = (formData.whyJoin);
+    console.log('section4' );
 
-    const data = ({ ...section1Data, ...section2Data, ...section3Data, ...stringData });
+    const data = ({ ...section1Data, ...section2Data, ...section3Data, stringDataRelevantExperiences, stringDataWhyJoin });
+    console.log(data);
     setIsReady(true);    
 
     try {
@@ -38,7 +41,7 @@ function SectionFor() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: (data)
+        body: JSON.stringify(data)
       });
       console.log(data);
       console.log('fdfd');
