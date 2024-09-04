@@ -32,7 +32,7 @@ function SectionFor() {
     console.log('section4' );
 
     const data = ({ ...section1Data, ...section2Data, ...section3Data, stringDataRelevantExperiences, stringDataWhyJoin });
-    console.log(data);
+    console.log(JSON.stringify(data));
     setIsReady(true);    
 
     try {
@@ -41,12 +41,11 @@ function SectionFor() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data)
+        body: (data)
       });
       console.log(data);
       console.log('fdfd');
       if (response.ok) {
-        // navigate('/LandingPage'); 
         console.log('ok');
       } else {
         console.error('rror:', response.status);
