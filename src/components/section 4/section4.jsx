@@ -41,7 +41,7 @@ function SectionFor() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: (data)
+        body: JSON.stringify(data)
       });
       console.log(data);
       console.log('fdfd');
