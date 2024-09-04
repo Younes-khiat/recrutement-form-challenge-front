@@ -40,6 +40,7 @@ function SectionFor() {
         },
         body: (data)
       });
+      console.log(data);
       console.log('fdfd');
       if (response.ok) {
         // navigate('/LandingPage'); 
