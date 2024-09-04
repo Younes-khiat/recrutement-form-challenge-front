@@ -38,14 +38,14 @@ function SectionFor() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data)
+        body: (data)
       });
       console.log('fdfd');
       if (response.ok) {
         // navigate('/LandingPage'); 
         console.log('ok');
       } else {
-        console.error('rror:', response.statusText);
+        console.error('rror:', response.status);
       }
     } catch (error) {
       console.error('Error:', error);
