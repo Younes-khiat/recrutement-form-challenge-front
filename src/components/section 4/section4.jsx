@@ -26,9 +26,11 @@ function SectionFor() {
     const section2Data = JSON.parse(localStorage.getItem('section2')) || {};
     const section3Data = JSON.parse(localStorage.getItem('section3')) || {};
 
-    console.log('section4' + (formData));
+    const stringData = JSON.stringify(formData);
+    console.log('section4' + (stringData));
 
-    const data = ({ ...section1Data, ...section2Data, ...section3Data, ...formData });
+    const data = ({ ...section1Data, ...section2Data, ...section3Data, ...stringData });
+    console.log
     setIsReady(true);    
 
     try {
