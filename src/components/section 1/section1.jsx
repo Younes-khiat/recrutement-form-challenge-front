@@ -43,16 +43,16 @@ useEffect(() => {
 }, [isReady]);
 
     return (
-    <div className=' position-absolute h-100 w-100 d-flex'>
-      <div style={{width:'40%', backgroundColor: '#202068'}} className='d-none d-md-flex px-5 h-100 d-flex flex-column justify-content-center'>
+    <div className=' position-absolute custom-height w-100 d-flex'>
+      <div className='widthColor1 d-none d-md-flex px-5 h-100 flex-column justify-content-center'>
         <img className='img-fluid w-50 mb-5 mx-auto ' src={logo} alt="cscc logo" />
         <h4 className='text-light text-center mt-5 mb-5'>Registration Form for joining cscc club 2024 / 2025</h4>
         <p style={{color: '#F6F5FC'}} className=' text-center '>are you ready to join us? fill the next form and start your new journey with us ! we are waiting for you !!</p>
         <button onClick={goBack} className='btn btn-outline-light fw-bold mx-auto my-2'>go back</button>
       </div>
-      <div style={{width:'60%', backgroundColor: '#f6f5fc',paddingLeft:'5%', paddingRight:'10%'}} className='h-100 d-flex flex-column justify-content-center '>
+      <div className='widthColor2 custom-width d-flex flex-column justify-content-center '>
         <h2 className='mx-5 px-5 py-4 fw-bold text-dark'>Personel Info</h2>
-          <form onSubmit={handleSubmit} className='row g-3 needs-validation px-5 mx-5'>
+          <form onSubmit={handleSubmit} className='row g-3 needs-validation '>
             <div className="col-md-6">
               <label htmlFor="firstName" className='form-label fw-semibold fs-5 pt-3'>First Name :</label>
               <input type="text" name='firstName' onChange={handleChange} className='p-2 form-control form-control-custom' placeholder='enter your first name' required></input>

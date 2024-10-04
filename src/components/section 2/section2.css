@@ -31,11 +31,3 @@
     
 }
 
-
-.form-control-custom:focus {
-    border-color: #202068 !important;
-    border-width: 2px !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-

@@ -4,6 +4,24 @@ import images from './images';
 import logo from './Pictures/logo2.png';
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if the screen width is less than 768px (common for mobile devices)
+    if (window.innerWidth < 768) {
+      // Redirect to the form page
+      navigate('/section1');
+    }
+  }, [navigate]);
+
+  // window.onload = function() {
+  //   // Check if the screen width is less than 768px (common for mobile devices)
+  //   if (window.innerWidth < 768) {
+  //     // Redirect to the form page
+  //     navigate('/section1');
+  //   }
+  // };
+  
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -14,7 +32,7 @@ const LandingPage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const navigate = useNavigate();
+  
 
   const handleJoinUsClick = () => {
     navigate('/section1');
