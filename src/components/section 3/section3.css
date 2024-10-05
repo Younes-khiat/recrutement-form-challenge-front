@@ -1,0 +1,33 @@
+@media (min-width: 768px) {  /* Bootstrap's md breakpoint */
+    .custom-height {
+      height: 100%;
+    }
+    .custom-width {
+        width: 60%;
+    }
+  }
+
+.widthColor1 {
+    width: 40% !important ;
+    background-color: #202068 !important;
+}
+
+.widthColor2 {
+    background-color: #f6f5fc !important;
+    padding-left:10% !important;
+    padding-right: 10% !important;
+    }
+
+.btn-custom {
+    color: white !important;
+    border-color: #202068 !important;
+    background-color: #202068 !important;
+}
+
+.btn-custom:hover {
+    background-color: white !important;
+    color: #202068 !important;
+    border-color: #202068 !important;
+    
+}
+
