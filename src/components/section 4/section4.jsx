@@ -63,7 +63,7 @@ function SectionFor() {
    }
   useEffect(() => {
     if (isReady) {
-      navigate('/');
+      navigate('/thankYou');
     }
   }, [isReady, navigate]);
   return (
