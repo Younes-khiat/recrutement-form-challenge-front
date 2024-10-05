@@ -68,7 +68,7 @@ useEffect(() => {
           <h6 className='col-md-4'>Development Dep:
           </h6>
           <div className="col-md-5">
-            <input className='form-range' type="range" onChange={(event)=>{handleChange(event); setRangeValue1(event.target.value);}} min="0" max="3"></input>
+            <input className='form-range' type="range" onChange={(event)=>{handleChange(event); setRangeValue1(event.target.value);}} min="0" max="3" required></input>
           </div>
           <h6 className='col-md-3 text-center py-2 py-sm-0'>{getRangeLabel(rangeValue1)}</h6>
         </div>
@@ -76,7 +76,7 @@ useEffect(() => {
         <div className=" col-md-12 row py-2">
           <h6 className='col-md-4'>Communication Dep:</h6>
           <div className="col-md-5">
-            <input className='form-range' type="range" onChange={(event)=>{handleChange(event); setRangeValue2(event.target.value);}} min="0" max="3"></input>
+            <input className='form-range' type="range" onChange={(event)=>{handleChange(event); setRangeValue2(event.target.value);}} min="0" max="3" required></input>
           </div>
           <h6 className='col-md-3 text-center py-2 py-sm-0'>{getRangeLabel(rangeValue2)}</h6>
         </div>
@@ -84,13 +84,12 @@ useEffect(() => {
         <div className=" col-md-12 row py-2">
           <h6 className='col-md-4'>Robotics Dep:</h6>
           <div className="col-md-5">
-            <input className='form-range' type="range" onChange={(event)=>{handleChange(event); setRangeValue3(event.target.value);}} min="0" max="3"></input>
+            <input className='form-range' type="range" onChange={(event)=>{handleChange(event); setRangeValue3(event.target.value);}} min="0" max="3" required></input>
           </div>
           <h6 className='col-md-3 text-center py-2 py-sm-0'>{getRangeLabel(rangeValue3)}</h6>
         </div>
-        <div className="d-block d-sm-none"></div>
-         <button type="submit" className='form-control mt-0 mt-sm-3 pt-2 btn btn-custom fw-bold fs-5'>Next</button>
-         </form>
+        <button type="submit" className='form-control mt-0 mt-sm-3 pt-2 btn btn-custom fw-bold fs-5'>Next</button>
+      </form>
     </div>
     
     </div>

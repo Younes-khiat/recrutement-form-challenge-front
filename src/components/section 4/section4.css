@@ -1,12 +1,24 @@
+@media (min-width: 576px) {  /* Bootstrap's md breakpoint */
+    .custom-height {
+      height: 100vh !important;
+    }
+    .custom-width {
+        width: 60%;
+        background-color: #f6f5fc !important;
+    }
+  }
+
 .widthColor1 {
     width: 40% !important ;
     background-color: #202068 !important;
 }
 
 .widthColor2 {
-    background-color: #F6F5FC !important;
-    padding-left:10% !important;
+    background-color: #f6f5fc !important;
+    padding-left:8% !important;
     padding-right: 10% !important;
+    height: 100% !important;
+
     }
 
 .btn-custom {
@@ -22,20 +34,3 @@
     
 }
 
-.mobileBorder {
-    border-color: #202068 !important;
-    border: 3px solid #007bff; /* Your desired border color */
-
-}
-
-@media (min-width: 576px) {  
-    .custom-height {
-      height: 100%;
-    }
-    .custom-width {
-        width: 60%;
-    }
-    .mobileBorder {
-        border: none !important;
-    }
-  }
