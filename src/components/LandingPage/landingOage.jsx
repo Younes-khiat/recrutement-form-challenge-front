@@ -13,14 +13,6 @@ const LandingPage = () => {
       navigate('/section1');
     }
   }, [navigate]);
-
-  // window.onload = function() {
-  //   // Check if the screen width is less than 768px (common for mobile devices)
-  //   if (window.innerWidth < 768) {
-  //     // Redirect to the form page
-  //     navigate('/section1');
-  //   }
-  // };
   
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -32,14 +24,12 @@ const LandingPage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  
-
   const handleJoinUsClick = () => {
     navigate('/section1');
   };
 
   return (
-    <div className=' w-100 h-100 d-flex'>
+    <div className='w-100 h-100 d-flex'>
       <div style={{width:'85%'}} className='h-100 position-absolute'>
           <img className='h-100 img-fluid w-100' src={images[currentSlide]} alt="Slide" />
       </div>
