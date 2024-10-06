@@ -14,7 +14,13 @@ function SectionTwo() {
     university: '',
     fieldOfStudy: '',
     gradeLevel: '',
-    languagesYouKnow: {},
+    languagesYouKnow: {
+      C: 'expert',
+      JAVA: 'expert',
+      PYTHON: 'expert',
+      JAVASCRIPT: 'expert',
+      PHP: 'expert'
+    },
   });
 
   const [isReady, setIsReady] = useState(false);
