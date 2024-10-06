@@ -31,7 +31,7 @@ function SectionThree() {
     // Update the specific department's range value in scientificInterest
     setFormData(({
       scientificInterest: {
-        ...formData.scientificInterest,
+        ...formData.scientificInterests,
         [e.target.name]: e.target.value, // Update the range value for the department selected
       },
     }));
