@@ -19,13 +19,21 @@ function SectionTwo() {
 
   const [isReady, setIsReady] = useState(false);
 
-  // State to store the selected grade level
-  const [gradeLevel, setGradeLevel] = useState('');
-
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    // setGradeLevel(e.target.value);
-  };
+    const { name, value } = e.target;
+  
+    if (['C', 'JAVA', 'PYTHON', 'JAVASCRIPT', 'PHP'].includes(name)) {
+      setFormData({
+        ...formData,
+        languagesYouKnow: {
+          ...formData.languagesYouKnow,
+          [name]: value
+        }
+      });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -96,12 +104,12 @@ function SectionTwo() {
         </div>
       
         <div className="col-md-6">
-          <label htmlFor="Languages You Know" className='form-label fw-semibold fs-5 pt-3'>Languages You Know:</label>
-          <div className="form-control">
+          <label htmlFor="Languages" className='form-label fw-semibold fs-5 pt-3'>Languages You Know:</label>
+          <div className="form-control" id='Languages'>
             <div className="row mb-1">
               <h6 className='col-5' >C</h6>
               <div className="col-7">
-                <select class="form-select-sm">
+                <select className="form-select-sm" name="C" value={formData.C} onChange={handleChange}>
                   <option selected>expert</option>
                   <option value="1">amateur</option>
                   <option value="2">beginner</option>
@@ -113,44 +121,44 @@ function SectionTwo() {
               <div className="row mb-2">
                 <h6 className='col-7' >JAVA</h6>
                 <div className="col-5">
-                  <select class="form-select-sm">
-                    <option selected>expert</option>
-                    <option value="1">amateur</option>
-                    <option value="2">beginner</option>
-                    <option value="3">not at all</option>
+                  <select class="form-select-sm" name="JAVA" value={formData.JAVA} onChange={handleChange}>
+                    <option value="expert" selected>expert</option>
+                    <option value="amateur">amateur</option>
+                    <option value="beginner">beginner</option>
+                    <option value="not at all">not at all</option>
                   </select>
                 </div>  
               </div> 
               <div className="row mb-2">
                 <h6 className='col-5' >PYTHON</h6>
                 <div className="col-7">
-                  <select class="form-select-sm">
-                    <option selected>expert</option>
-                    <option value="1">amateur</option>
-                    <option value="2">beginner</option>
-                    <option value="3">not at all</option>
+                  <select class="form-select-sm" name="PYTHON" value={formData.PYTHON} onChange={handleChange}>
+                    <option value="expert" selected>expert</option>
+                    <option value="amateur">amateur</option>
+                    <option value="beginner">beginner</option>
+                    <option value="not at all">not at all</option>
                   </select>
                 </div>  
               </div> 
               <div className="row mb-2">
                 <h6 className='col-7' >JAVA SCRIPT</h6>
                 <div className="col-5">
-                  <select class="form-select-sm">
-                    <option selected>expert</option>
-                    <option value="1">amateur</option>
-                    <option value="2">beginner</option>
-                    <option value="3">not at all</option>
+                  <select class="form-select-sm" name="JAVASCRIPT" value={formData.JAVASCRIPT} onChange={handleChange}>
+                    <option value="expert" selected>expert</option>
+                    <option value="amateur">amateur</option>
+                    <option value="beginner">beginner</option>
+                    <option value="not at all">not at all</option>
                   </select>
                 </div>  
               </div> 
               <div className="row mb-2">
                 <h6 className='col-5' >PHP</h6>
                 <div className="col-7">
-                  <select class="form-select-sm">
-                    <option selected>expert</option>
-                    <option value="1">amateur</option>
-                    <option value="2">beginner</option>
-                    <option value="3">not at all</option>
+                <select className="form-select-sm" name="PHP" value={formData.PHP} onChange={handleChange}>
+                    <option value="expert" selected>expert</option>
+                    <option value="amateur">amateur</option>
+                    <option value="beginner">beginner</option>
+                    <option value="not at all">not at all</option>
                   </select>
                 </div>  
               </div>  
