@@ -11,7 +11,7 @@ function SectionThree() {
   }
 
   const [formData, setFormData] = useState({
-    scientificInterest: []
+    scientificInterest: {}
   });
 
   const [isReady, setIsReady] = useState(false);
