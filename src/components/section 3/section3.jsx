@@ -27,9 +27,17 @@ function SectionThree() {
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-
+  
+    // Update the specific department's range value in scientificInterest
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      scientificInterest: {
+        ...prevFormData.scientificInterest,
+        [e.target.name]: e.target.value, // Update the range value for the department selected
+      },
+    }));
   };
+  
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
