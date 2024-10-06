@@ -19,10 +19,12 @@ function SectionTwo() {
 
   const [isReady, setIsReady] = useState(false);
 
- 
+  // State to store the selected grade level
+  const [gradeLevel, setGradeLevel] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // setGradeLevel(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -71,24 +73,24 @@ function SectionTwo() {
         <label htmlFor="Grade Level" className='form-label fw-semibold fs-5 pt-3'>Grade Level:</label>
           <div className='form-control'>
             <div className="form-check mb-2">
-              <input type="radio" name='gradeLevel' id='grade1' onChange={handleChange} className='p-2 form-check-input' required></input>
+              <input type="radio" name='gradeLevel' id='grade1' value='L1 / ING first year' onChange={handleChange} className='p-2 form-check-input' required />              
               <label class="form-check-label" for="grade1">L1 / ING first year</label>
             </div>
             <div className="form-check mb-2">
-              <input type="radio" name='gradeLevel' id='grade2' onChange={handleChange} className='p-2 form-check-input' required></input>
-              <label class="form-check-label" for="grade2">L2 / ING second year</label>
+            <input type="radio" name='gradeLevel' id='grade2' value='L2 / ING second year' onChange={handleChange} className='p-2 form-check-input' required />              
+            <label class="form-check-label" for="grade2">L2 / ING second year</label>
             </div>
             <div className="form-check mb-2">
-              <input type="radio" name='gradeLevel' id='grade3' onChange={handleChange} className='p-2 form-check-input' required></input>
-              <label class="form-check-label" for="grade3">L3 / ING third year</label>
+            <input type="radio" name='gradeLevel' id='grade3' value='L3 / ING third year' onChange={handleChange} className='p-2 form-check-input' required />              
+            <label class="form-check-label" for="grade3">L3 / ING third year</label>
             </div>
             <div className="form-check mb-2">
-              <input type="radio" name='gradeLevel' id='grade4' onChange={handleChange} className='p-2 form-check-input' required></input>
-              <label class="form-check-label" for="grade4">M1 / ING fourth year</label>
+            <input type="radio" name='gradeLevel' id='grade4' value='M1 / ING forth year' onChange={handleChange} className='p-2 form-check-input' required />              
+            <label class="form-check-label" for="grade4">M1 / ING fourth year</label>
             </div>
             <div className="form-check mb-2">
-              <input type="radio" name='gradeLevel' id='grade5' onChange={handleChange} className='p-2 form-check-input' required></input>
-              <label class="form-check-label" for="grade5">M2 / ING fifth year</label>
+            <input type="radio" name='gradeLevel' id='grade5' value='M2 / ING fifth year' onChange={handleChange} className='p-2 form-check-input' required />              
+            <label class="form-check-label" for="grade5">M2 / ING fifth year</label>
             </div>
           </div>
         </div>
