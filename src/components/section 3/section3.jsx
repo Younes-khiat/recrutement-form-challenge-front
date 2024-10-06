@@ -11,7 +11,11 @@ function SectionThree() {
   }
 
   const [formData, setFormData] = useState({
-    scientificInterests: {}
+    scientificInterests: {
+      Development: 3,  // Default values
+      Communication: 3,
+      Robotics: 3,
+    }
   });
 
   const [isReady, setIsReady] = useState(false);
@@ -29,10 +33,11 @@ function SectionThree() {
   const handleChange = (e) => {
   
     // Update the specific department's range value in scientificInterest
-    setFormData(({
+    setFormData((prevData) => ({
+      ...prevData,
       scientificInterests: {
-        ...formData.scientificInterests,
-        [e.target.name]: e.target.value, // Update the range value for the department selected
+        ...prevData.scientificInterests,
+        [e.target.name]: parseInt(e.target.value), // Update the range value for the department selected
       },
     }));
   };
