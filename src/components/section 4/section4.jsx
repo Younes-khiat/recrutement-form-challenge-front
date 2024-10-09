@@ -11,8 +11,8 @@ function SectionFor() {
   }
 
   const [formData, setFormData] = useState({
-    relevantExperiences: '',
-    whyJoin:''
+    rrelevantExperiences: '',
+    wwhyJoin:''
   });
 
   const [isReady, setIsReady] = useState(false);
@@ -32,11 +32,11 @@ function SectionFor() {
     const section2Data = JSON.parse(localStorage.getItem('section2')) || {};
     const section3Data = JSON.parse(localStorage.getItem('section3')) || {};
 
-    const stringDataRelevantExperiences = (formData.relevantExperiences);
-    const stringDataWhyJoin = (formData.whyJoin);
+    const relevantExperiences = (formData.rrelevantExperiences);
+    const whyJoin = (formData.wwhyJoin);
     console.log('section4' );
 
-    const data = ({ ...section1Data, ...section2Data, ...section3Data, stringDataRelevantExperiences, stringDataWhyJoin });
+    const data = ({ ...section1Data, ...section2Data, ...section3Data, relevantExperiences, whyJoin });
     console.log(JSON.stringify(data));
     setIsReady(true);    
 
@@ -79,17 +79,17 @@ function SectionFor() {
       <h2 className='mx-5 mb-2 mb-sm-3 px-4 pb-4 fw-bold text-dark'>Preferences:</h2>
       <form onSubmit={handleSubmit} className='row g-3 needs-validation mb-5 mb-sm-0'>
         <div className="col-md-6 mb-4">
-          <label htmlFor="relevantExperiences:" className='form-label'>Relevant Experiences:</label>
+          <label htmlFor="rrelevantExperiences:" className='form-label'>Relevant Experiences:</label>
           <div className="form-floating d-flex flex-column h-100">
-            <textarea className='form-control h-100' id='relevantExperiences' type="text" name='relevantExperiences' onChange={handleChange} placeholder='Describe any relevant experience you have:' required></textarea>
-            <label htmlFor="relevantExperiences">Share with us your Experiences</label>
+            <textarea className='form-control h-100' id='rrelevantExperiences' type="text" name='rrelevantExperiences' onChange={handleChange} placeholder='Describe any relevant experience you have:' required></textarea>
+            <label htmlFor="rrelevantExperiences">Share with us your Experiences</label>
           </div>
         </div>
         <div className="col-md-6 mb-4">
-          <label htmlFor="whyJoin:" className='form-label'>Why Join:</label>
+          <label htmlFor="wwhyJoin:" className='form-label'>Why Join:</label>
           <div className="form-floating d-flex flex-column h-100">
-            <textarea className='form-control h-100' id='whyJoin' type="text" name='whyJoin' onChange={handleChange} placeholder='Explain why you want to join the scientific club:' required></textarea>
-            <label htmlFor="whyJoin">Why joining us</label>
+            <textarea className='form-control h-100' id='wwhyJoin' type="text" name='whyJoin' onChange={handleChange} placeholder='Explain why you want to join the scientific club:' required></textarea>
+            <label htmlFor="wwhyJoin">Why joining us</label>
           </div>
         </div>
 
