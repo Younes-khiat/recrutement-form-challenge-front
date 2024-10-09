@@ -13,7 +13,7 @@ function SectionFor() {
 
   const [formData, setFormData] = useState({
     rrelevantExperiences: '',
-    wwhyJoin:''
+    wwhyJoin: ''
   });
 
   const [isReady, setIsReady] = useState(false);
@@ -23,12 +23,14 @@ function SectionFor() {
   };
   const handleSubmit = async (e) =>{
     e.preventDefault();
+    console.log("aww "+ formData.rrelevantExperiences +" gg "+ formData.wwhyJoin);
     for(const field in formData) {
       if (!formData[field]) {
+        console.log(field +" saha");
         return ({message: `mmissing required field ${field}`})
       }
     }
-    
+    console.log("wch kyn");
     const section1Data = JSON.parse(localStorage.getItem('section1')) || {};
     const section2Data = JSON.parse(localStorage.getItem('section2')) || {};
     const section3Data = JSON.parse(localStorage.getItem('section3')) || {};
@@ -89,7 +91,7 @@ function SectionFor() {
         <div className="col-md-6 mb-4">
           <label htmlFor="wwhyJoin:" className='form-label'>Why Join:</label>
           <div className="form-floating d-flex flex-column h-100">
-            <textarea className='form-control h-100' id='wwhyJoin' type="text" name='whyJoin' onChange={handleChange} placeholder='Explain why you want to join the scientific club:' required></textarea>
+            <textarea className='form-control h-100' id='wwhyJoin' type="text" name='wwhyJoin' onChange={handleChange} placeholder='Explain why you want to join the scientific club:' required></textarea>
             <label htmlFor="wwhyJoin">Why joining us</label>
           </div>
         </div>

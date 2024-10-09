@@ -88,23 +88,23 @@ function SectionTwo() {
           <div className='form-control'>
             <div className="form-check mb-2">
               <input type="radio" name='gradeLevel' id='grade1' value='L1 / ING first year' onChange={handleChange} className='p-2 form-check-input' required />              
-              <label class="form-check-label" for="grade1">L1 / ING first year</label>
+              <label className="form-check-label" htmlFor="grade1">L1 / ING first year</label>
             </div>
             <div className="form-check mb-2">
             <input type="radio" name='gradeLevel' id='grade2' value='L2 / ING second year' onChange={handleChange} className='p-2 form-check-input' required />              
-            <label class="form-check-label" for="grade2">L2 / ING second year</label>
+            <label className="form-check-label" htmlFor="grade2">L2 / ING second year</label>
             </div>
             <div className="form-check mb-2">
             <input type="radio" name='gradeLevel' id='grade3' value='L3 / ING third year' onChange={handleChange} className='p-2 form-check-input' required />              
-            <label class="form-check-label" for="grade3">L3 / ING third year</label>
+            <label className="form-check-label" htmlFor="grade3">L3 / ING third year</label>
             </div>
             <div className="form-check mb-2">
             <input type="radio" name='gradeLevel' id='grade4' value='M1 / ING forth year' onChange={handleChange} className='p-2 form-check-input' required />              
-            <label class="form-check-label" for="grade4">M1 / ING fourth year</label>
+            <label className="form-check-label" htmlFor="grade4">M1 / ING fourth year</label>
             </div>
             <div className="form-check mb-2">
             <input type="radio" name='gradeLevel' id='grade5' value='M2 / ING fifth year' onChange={handleChange} className='p-2 form-check-input' required />              
-            <label class="form-check-label" for="grade5">M2 / ING fifth year</label>
+            <label className="form-check-label" htmlFor="grade5">M2 / ING fifth year</label>
             </div>
           </div>
         </div>
@@ -116,10 +116,10 @@ function SectionTwo() {
               <h6 className='col-5' >C</h6>
               <div className="col-7">
                 <select className="form-select-sm" name="C" value={formData.C} onChange={handleChange}>
-                  <option selected>expert</option>
-                  <option value="1">amateur</option>
-                  <option value="2">beginner</option>
-                  <option value="3">not at all</option>
+                  <option value="expert">expert</option>
+                  <option value="amateur">amateur</option>
+                  <option value="beginner">beginner</option>
+                  <option value="not at all">not at all</option>
                 </select>
               </div> 
             </div>
@@ -127,8 +127,8 @@ function SectionTwo() {
               <div className="row mb-2">
                 <h6 className='col-7' >JAVA</h6>
                 <div className="col-5">
-                  <select class="form-select-sm" name="JAVA" value={formData.JAVA} onChange={handleChange}>
-                    <option value="expert" selected>expert</option>
+                  <select className="form-select-sm" name="JAVA" value={formData.JAVA} onChange={handleChange}>
+                    <option value="expert">expert</option>
                     <option value="amateur">amateur</option>
                     <option value="beginner">beginner</option>
                     <option value="not at all">not at all</option>
@@ -138,8 +138,8 @@ function SectionTwo() {
               <div className="row mb-2">
                 <h6 className='col-5' >PYTHON</h6>
                 <div className="col-7">
-                  <select class="form-select-sm" name="PYTHON" value={formData.PYTHON} onChange={handleChange}>
-                    <option value="expert" selected>expert</option>
+                  <select className="form-select-sm" name="PYTHON" value={formData.PYTHON} onChange={handleChange}>
+                    <option value="expert">expert</option>
                     <option value="amateur">amateur</option>
                     <option value="beginner">beginner</option>
                     <option value="not at all">not at all</option>
@@ -149,8 +149,8 @@ function SectionTwo() {
               <div className="row mb-2">
                 <h6 className='col-7' >JAVA SCRIPT</h6>
                 <div className="col-5">
-                  <select class="form-select-sm" name="JAVASCRIPT" value={formData.JAVASCRIPT} onChange={handleChange}>
-                    <option value="expert" selected>expert</option>
+                  <select className="form-select-sm" name="JAVASCRIPT" value={formData.JAVASCRIPT} onChange={handleChange}>
+                    <option value="expert">expert</option>
                     <option value="amateur">amateur</option>
                     <option value="beginner">beginner</option>
                     <option value="not at all">not at all</option>
@@ -161,7 +161,7 @@ function SectionTwo() {
                 <h6 className='col-5' >PHP</h6>
                 <div className="col-7">
                 <select className="form-select-sm" name="PHP" value={formData.PHP} onChange={handleChange}>
-                    <option value="expert" selected>expert</option>
+                    <option value="expert">expert</option>
                     <option value="amateur">amateur</option>
                     <option value="beginner">beginner</option>
                     <option value="not at all">not at all</option>
