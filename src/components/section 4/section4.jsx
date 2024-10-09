@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {useNavigate } from 'react-router-dom';
 import logo from '../LandingPage/Pictures/logo2.png';
 import './section4.css';
+// l3ib machi mlih
 
 function SectionFor() {
 
